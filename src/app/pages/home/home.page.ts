@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { games } from 'src/app/Interfaces/game-list';
+import { GameService } from 'src/app/services/game.service';
 
 @Component({
   selector: 'app-home',
@@ -8,12 +8,15 @@ import { games } from 'src/app/Interfaces/game-list';
 })
 export class HomePage implements OnInit {
 
-  gameList=games;
+  gameList: any[] = []
 
-  constructor() { }
+  constructor(private _gameService: GameService) { }
 
   ngOnInit() {
-    console.log(games);
+   
+    this._gameService.getGames().then((games: any) => {
+      this.gameList = games;
+    }).catch(console.error)
     
   }
 
