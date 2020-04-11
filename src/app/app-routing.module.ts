@@ -8,13 +8,23 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'games',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
     path: 'home',
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
   {
     path: 'game',
     loadChildren: () => import('./pages/game/game.module').then( m => m.GamePageModule)
+  },
+  {
+    path: 'game/:id',
+    loadChildren: () => import('./pages/dummy/dummy.module').then( m => m.DummyPageModule)
   }
+
 ];
 
 @NgModule({
