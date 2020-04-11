@@ -12,7 +12,6 @@ export class GamePage implements OnInit {
   constructor(private route:ActivatedRoute, private _router:Router) { }
 
   ngOnInit() {
-
     this.id=this.route.snapshot.paramMap.get('id');
   }
 
