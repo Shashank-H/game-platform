@@ -1,0 +1,20 @@
+<div class="game-card">
+  <img [src]="game.image" alt="Game Image" class="game-card__bg-img">
+  <div class="game-card__overley"></div>
+  
+  <div class="game-card__main">
+    <ion-item lines="none" class="game-card__main__title game-card__main__title--item">
+      <ion-label class="game-card__main__title game-card__main__title--label">{{game.name}}</ion-label>
+    </ion-item>
+
+    <div class="game-card__main__play">
+
+      <ion-button color="success" (click)="openGame()" expand="block" fill="clear" shape="round">
+        <ion-icon slot="start" name="play-circle-outline" color="primary"></ion-icon>
+        Play
+      </ion-button>
+
+    </div>
+  
+  </div>
+</div>

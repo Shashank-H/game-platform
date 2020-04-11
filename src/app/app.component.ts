@@ -13,9 +13,9 @@ export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [
     {
-      title: 'Home',
+      title: 'Games',
       url: 'home',
-      icon: 'home'
+      icon: 'game-controller'
     },
     {
       title: 'Settings',

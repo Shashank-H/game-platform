@@ -16,5 +16,9 @@
     </ion-toolbar>
   </ion-header>
 
+  <div class="content">
+    <app-game-card class="game-card" *ngFor="let game of gameList" [game]="game"></app-game-card>
+  </div>
+
   
 </ion-content>

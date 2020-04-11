@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-game',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GamePage implements OnInit {
 
-  constructor() { }
+  id;
+  constructor(private route:ActivatedRoute, private _router:Router) { }
 
   ngOnInit() {
+
+    this.id=this.route.snapshot.paramMap.get('id');
+  }
+
+  goBack(){
+    this._router.navigate(["/home"])
   }
 
 }
